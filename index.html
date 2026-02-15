@@ -457,24 +457,24 @@
 const ACTIVE_PROVIDER = "gemini-lite";  // ← CHANGE THIS TO SWITCH
 
 const PROVIDERS = {
-  // Google Gemini 2.0 Flash — smart, but free tier is very limited (Dec 2025 cuts)
+  // Gemini 2.5 Flash — good quality, 10 RPM / 250 req per day free
   "gemini": {
-    name: "Gemini 2.0 Flash",
-    key: "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o",           // ← paste Gemini key
-    model: "gemini-2.0-flash",
+    name: "Gemini 2.5 Flash",
+    key: "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o",
+    model: "gemini-2.5-flash-preview-05-20",
     type: "gemini"
   },
-  // Google Gemini 2.0 Flash-Lite — less capable but ~1000 req/day on free tier
+  // Gemini 2.5 Flash-Lite — fastest, 15 RPM / 1000 req per day free
   "gemini-lite": {
-    name: "Gemini 2.0 Flash-Lite",
-    key: "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o",           // ← same Gemini key works
+    name: "Gemini 2.5 Flash-Lite",
+    key: "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o",
     model: "gemini-2.0-flash-lite",
     type: "gemini"
   },
-  // MiniMax M2.5 — OpenAI-compatible, 20 RPM free tier, very capable
+  // MiniMax M2.5 — OpenAI-compatible, 20 RPM free tier
   "minimax": {
     name: "MiniMax M2.5",
-    key: "YOUR_MINIMAX_KEY_HERE",          // ← paste MiniMax key from platform.minimax.io
+    key: "YOUR_MINIMAX_KEY_HERE",
     model: "MiniMax-M2.5",
     type: "openai-compatible",
     baseUrl: "https://api.minimax.io/v1/chat/completions"
@@ -650,7 +650,7 @@ async function callGeminiAPI(userMessage, systemPrompt) {
       const errMsg = errData?.error?.message || response.statusText;
       console.error('Gemini API error:', errMsg);
       if (response.status === 429) {
-        return `⚠ <strong>Rate limit reached (${provider.name}).</strong> Try switching to <code>"gemini-lite"</code> or <code>"minimax"</code> in the ACTIVE_PROVIDER setting — they have higher free tier limits.`;
+        return `⚠ <strong>Rate limit reached.</strong> The AI service is temporarily busy. Please wait a moment and try again.`;
       }
       return `⚠ <strong>API error (${response.status}):</strong> ${escHtml(errMsg)}`;
     }
@@ -711,7 +711,7 @@ async function callOpenAICompatibleAPI(userMessage, systemPrompt) {
       const errMsg = errData?.error?.message || response.statusText;
       console.error(`${provider.name} API error:`, errMsg);
       if (response.status === 429) {
-        return `⚠ <strong>Rate limit reached (${provider.name}).</strong> Wait a minute or try a different provider.`;
+        return `⚠ <strong>Rate limit reached.</strong> The AI service is temporarily busy. Please wait a moment and try again.`;
       }
       return `⚠ <strong>API error (${response.status}):</strong> ${escHtml(errMsg)}`;
     }
