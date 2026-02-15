@@ -450,7 +450,7 @@
 
 // ── Configuration ──
 // PASTE YOUR GEMINI API KEY BETWEEN THE QUOTES BELOW:
-const GEMINI_API_KEY = "YOUR_GEMINI_KEY_HERE";
+const GEMINI_API_KEY = "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o";
 
 const GEMINI_MODEL = "gemini-2.0-flash";
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
@@ -576,7 +576,7 @@ AVAILABLE DATA:
 
 // ── Call Gemini API ──
 async function callGemini(userMessage) {
-  if (GEMINI_API_KEY === "YAIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o" || !GEMINI_API_KEY) {
+ if (GEMINI_API_KEY === "YOUR_GEMINI_KEY_HERE" || !GEMINI_API_KEY) {
     return "⚠ <strong>API key not configured.</strong> Open this HTML file in a text editor, find the line <code>const GEMINI_API_KEY</code> near the top of the script, and paste your Gemini API key there.";
   }
 
