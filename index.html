@@ -448,12 +448,41 @@
 // FDA Watch — Production Chat with Gemini API
 // ═══════════════════════════════════════════════════════════
 
-// ── Configuration ──
-// PASTE YOUR GEMINI API KEY BETWEEN THE QUOTES BELOW:
-const GEMINI_API_KEY = "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o";
+// ═══════════════════════════════════════════════════════════
+// MODEL CONFIGURATION — Edit this section to switch providers
+// ═══════════════════════════════════════════════════════════
+// Set ACTIVE_PROVIDER to one of: "gemini", "gemini-lite", "minimax"
+// Then paste the matching API key below.
 
-const GEMINI_MODEL = "gemini-2.0-flash";
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+const ACTIVE_PROVIDER = "gemini-lite";  // ← CHANGE THIS TO SWITCH
+
+const PROVIDERS = {
+  // Google Gemini 2.0 Flash — smart, but free tier is very limited (Dec 2025 cuts)
+  "gemini": {
+    name: "Gemini 2.0 Flash",
+    key: "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o",           // ← paste Gemini key
+    model: "gemini-2.0-flash",
+    type: "gemini"
+  },
+  // Google Gemini 2.0 Flash-Lite — less capable but ~1000 req/day on free tier
+  "gemini-lite": {
+    name: "Gemini 2.0 Flash-Lite",
+    key: "AIzaSyBsLauPGGNiyVHvDhsiKWmoIntOo_nUd7o",           // ← same Gemini key works
+    model: "gemini-2.0-flash-lite",
+    type: "gemini"
+  },
+  // MiniMax M2.5 — OpenAI-compatible, 20 RPM free tier, very capable
+  "minimax": {
+    name: "MiniMax M2.5",
+    key: "YOUR_MINIMAX_KEY_HERE",          // ← paste MiniMax key from platform.minimax.io
+    model: "MiniMax-M2.5",
+    type: "openai-compatible",
+    baseUrl: "https://api.minimax.io/v1/chat/completions"
+  }
+};
+
+const provider = PROVIDERS[ACTIVE_PROVIDER];
+// ═══════════════════════════════════════════════════════════
 
 // ── DOM refs ──
 const chatArea = document.getElementById('chatArea');
@@ -574,28 +603,33 @@ AVAILABLE DATA:
   return prompt;
 }
 
-// ── Call Gemini API ──
-async function callGemini(userMessage) {
- if (GEMINI_API_KEY === "YOUR_GEMINI_KEY_HERE" || !GEMINI_API_KEY) {
-    return "⚠ <strong>API key not configured.</strong> Open this HTML file in a text editor, find the line <code>const GEMINI_API_KEY</code> near the top of the script, and paste your Gemini API key there.";
+// ── Call AI (supports Gemini and OpenAI-compatible providers) ──
+async function callAI(userMessage) {
+  // Check for placeholder keys
+  if (!provider.key || provider.key.startsWith("YOUR_")) {
+    return `⚠ <strong>API key not configured for ${provider.name}.</strong> Open this HTML file, find the PROVIDERS section near the top, and paste your API key for <code>${ACTIVE_PROVIDER}</code>.`;
   }
 
-  // Build conversation for context
-  conversationHistory.push({ role: "user", parts: [{ text: userMessage }] });
+  const systemPrompt = buildSystemPrompt();
 
-  // Keep conversation manageable (last 20 exchanges)
+  if (provider.type === "gemini") {
+    return await callGeminiAPI(userMessage, systemPrompt);
+  } else {
+    return await callOpenAICompatibleAPI(userMessage, systemPrompt);
+  }
+}
+
+// ── Gemini-specific call ──
+async function callGeminiAPI(userMessage, systemPrompt) {
+  const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${provider.model}:generateContent?key=${provider.key}`;
+
+  conversationHistory.push({ role: "user", parts: [{ text: userMessage }] });
   const recentHistory = conversationHistory.slice(-40);
 
   const body = {
-    system_instruction: {
-      parts: [{ text: buildSystemPrompt() }]
-    },
+    system_instruction: { parts: [{ text: systemPrompt }] },
     contents: recentHistory,
-    generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 1024,
-      topP: 0.9
-    },
+    generationConfig: { temperature: 0.7, maxOutputTokens: 1024, topP: 0.9 },
     safetySettings: [
       { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
       { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
@@ -615,12 +649,8 @@ async function callGemini(userMessage) {
       const errData = await response.json().catch(() => ({}));
       const errMsg = errData?.error?.message || response.statusText;
       console.error('Gemini API error:', errMsg);
-
-      if (response.status === 400 && errMsg.includes('API key')) {
-        return "⚠ <strong>Invalid API key.</strong> Please check your Gemini API key is correct.";
-      }
       if (response.status === 429) {
-        return "⚠ <strong>Rate limit reached.</strong> The free Gemini tier has a limit — wait a minute and try again.";
+        return `⚠ <strong>Rate limit reached (${provider.name}).</strong> Try switching to <code>"gemini-lite"</code> or <code>"minimax"</code> in the ACTIVE_PROVIDER setting — they have higher free tier limits.`;
       }
       return `⚠ <strong>API error (${response.status}):</strong> ${escHtml(errMsg)}`;
     }
@@ -628,18 +658,80 @@ async function callGemini(userMessage) {
     const data = await response.json();
     const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
-    if (!reply) {
-      console.warn('Empty Gemini response:', data);
-      return "I got an empty response — could you rephrase your question?";
+    if (!reply) return "I got an empty response — could you rephrase your question?";
+
+    conversationHistory.push({ role: "model", parts: [{ text: reply }] });
+    return reply;
+
+  } catch (err) {
+    console.error('Network error:', err);
+    return "⚠ <strong>Connection error.</strong> Check your internet connection and try again.";
+  }
+}
+
+// ── OpenAI-compatible call (MiniMax, etc.) ──
+async function callOpenAICompatibleAPI(userMessage, systemPrompt) {
+  // Convert Gemini-format history to OpenAI format
+  const messages = [{ role: "system", content: systemPrompt }];
+
+  // Add conversation history
+  for (const msg of conversationHistory) {
+    const role = msg.role === "model" ? "assistant" : msg.role;
+    const content = msg.parts ? msg.parts[0].text : msg.content;
+    messages.push({ role, content });
+  }
+  messages.push({ role: "user", content: userMessage });
+
+  // Keep history manageable
+  if (messages.length > 42) {
+    const system = messages[0];
+    messages.splice(1, messages.length - 41);
+    messages[0] = system;
+  }
+
+  const body = {
+    model: provider.model,
+    messages: messages,
+    temperature: 0.7,
+    max_tokens: 1024
+  };
+
+  try {
+    const response = await fetch(provider.baseUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${provider.key}`
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      const errMsg = errData?.error?.message || response.statusText;
+      console.error(`${provider.name} API error:`, errMsg);
+      if (response.status === 429) {
+        return `⚠ <strong>Rate limit reached (${provider.name}).</strong> Wait a minute or try a different provider.`;
+      }
+      return `⚠ <strong>API error (${response.status}):</strong> ${escHtml(errMsg)}`;
     }
 
-    // Add assistant reply to history
+    const data = await response.json();
+    let reply = data?.choices?.[0]?.message?.content;
+
+    if (!reply) return "I got an empty response — could you rephrase your question?";
+
+    // Strip <think> tags from MiniMax reasoning models
+    reply = reply.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+
+    // Store in Gemini format for history compatibility
+    conversationHistory.push({ role: "user", parts: [{ text: userMessage }] });
     conversationHistory.push({ role: "model", parts: [{ text: reply }] });
 
     return reply;
 
   } catch (err) {
-    console.error('Network error calling Gemini:', err);
+    console.error('Network error:', err);
     return "⚠ <strong>Connection error.</strong> Check your internet connection and try again.";
   }
 }
@@ -800,8 +892,8 @@ async function sendMessage() {
 
   const typingId = showTyping();
 
-  // Call Gemini with the real data
-  const reply = await callGemini(text);
+  // Call AI with the real data
+  const reply = await callAI(text);
 
   removeTyping(typingId);
   addBotMessage(reply);
@@ -809,6 +901,10 @@ async function sendMessage() {
 
 // ── Initialize ──
 loadFDAData();
+// Show active provider in header
+const badge = document.querySelector('.header-badge');
+if (badge) badge.textContent = provider.name;
+console.log(`FDA Watch using: ${provider.name} (${ACTIVE_PROVIDER})`);
 </script>
 </body>
 </html>
