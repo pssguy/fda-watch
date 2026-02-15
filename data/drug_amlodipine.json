@@ -1,0 +1,107 @@
+{
+  "drug_name": "AMLODIPINE",
+  "total_reports": 257866,
+  "top_reactions": [
+    {
+      "reaction": "FATIGUE",
+      "count": 15696,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 14038,
+      "pct_of_max": 89
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 13425,
+      "pct_of_max": 86
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 13222,
+      "pct_of_max": 84
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 12075,
+      "pct_of_max": 77
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 11242,
+      "pct_of_max": 72
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 10671,
+      "pct_of_max": 68
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 9887,
+      "pct_of_max": 63
+    },
+    {
+      "reaction": "ACUTE KIDNEY INJURY",
+      "count": 9369,
+      "pct_of_max": 60
+    },
+    {
+      "reaction": "PAIN",
+      "count": 9175,
+      "pct_of_max": 58
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 8736,
+      "pct_of_max": 56
+    },
+    {
+      "reaction": "FALL",
+      "count": 8494,
+      "pct_of_max": 54
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 8481,
+      "pct_of_max": 54
+    },
+    {
+      "reaction": "HYPOTENSION",
+      "count": 8369,
+      "pct_of_max": 53
+    },
+    {
+      "reaction": "MALAISE",
+      "count": 7951,
+      "pct_of_max": 51
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 199555,
+      "pct": 77.4
+    },
+    {
+      "serious": "Not Serious",
+      "count": 58236,
+      "pct": 22.6
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Female",
+      "count": 125202
+    },
+    {
+      "sex": "Male",
+      "count": 111143
+    },
+    {
+      "sex": "Unknown",
+      "count": 335
+    }
+  ]
+}

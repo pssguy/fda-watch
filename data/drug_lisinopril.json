@@ -1,0 +1,107 @@
+{
+  "drug_name": "LISINOPRIL",
+  "total_reports": 297697,
+  "top_reactions": [
+    {
+      "reaction": "FATIGUE",
+      "count": 19347,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 17995,
+      "pct_of_max": 93
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 17182,
+      "pct_of_max": 89
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 16772,
+      "pct_of_max": 87
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 13649,
+      "pct_of_max": 71
+    },
+    {
+      "reaction": "PAIN",
+      "count": 13304,
+      "pct_of_max": 69
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 13188,
+      "pct_of_max": 68
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 12597,
+      "pct_of_max": 65
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 10670,
+      "pct_of_max": 55
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 10620,
+      "pct_of_max": 55
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 10491,
+      "pct_of_max": 54
+    },
+    {
+      "reaction": "ACUTE KIDNEY INJURY",
+      "count": 9385,
+      "pct_of_max": 49
+    },
+    {
+      "reaction": "ARTHRALGIA",
+      "count": 9325,
+      "pct_of_max": 48
+    },
+    {
+      "reaction": "CHRONIC KIDNEY DISEASE",
+      "count": 9109,
+      "pct_of_max": 47
+    },
+    {
+      "reaction": "FALL",
+      "count": 8900,
+      "pct_of_max": 46
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 181766,
+      "pct": 61.1
+    },
+    {
+      "serious": "Not Serious",
+      "count": 115812,
+      "pct": 38.9
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Female",
+      "count": 145321
+    },
+    {
+      "sex": "Male",
+      "count": 134984
+    },
+    {
+      "sex": "Unknown",
+      "count": 336
+    }
+  ]
+}

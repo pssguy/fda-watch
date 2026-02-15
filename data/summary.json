@@ -1,0 +1,381 @@
+{
+  "generated": "2026-02-14T17:23:51Z",
+  "top_reactions": [
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 1260875,
+      "pct_of_max": 100,
+      "count_k": "1261k"
+    },
+    {
+      "reaction": "DEATH",
+      "count": 824417,
+      "pct_of_max": 65,
+      "count_k": "824k"
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 815398,
+      "pct_of_max": 65,
+      "count_k": "815k"
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 752662,
+      "pct_of_max": 60,
+      "count_k": "753k"
+    },
+    {
+      "reaction": "FATIGUE",
+      "count": 742318,
+      "pct_of_max": 59,
+      "count_k": "742k"
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 610631,
+      "pct_of_max": 48,
+      "count_k": "611k"
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 599899,
+      "pct_of_max": 48,
+      "count_k": "600k"
+    },
+    {
+      "reaction": "PAIN",
+      "count": 592583,
+      "pct_of_max": 47,
+      "count_k": "593k"
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 541707,
+      "pct_of_max": 43,
+      "count_k": "542k"
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 476747,
+      "pct_of_max": 38,
+      "count_k": "477k"
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 446654,
+      "pct_of_max": 35,
+      "count_k": "447k"
+    },
+    {
+      "reaction": "MALAISE",
+      "count": 423546,
+      "pct_of_max": 34,
+      "count_k": "424k"
+    },
+    {
+      "reaction": "RASH",
+      "count": 411587,
+      "pct_of_max": 33,
+      "count_k": "412k"
+    },
+    {
+      "reaction": "ARTHRALGIA",
+      "count": 394780,
+      "pct_of_max": 31,
+      "count_k": "395k"
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 360755,
+      "pct_of_max": 29,
+      "count_k": "361k"
+    },
+    {
+      "reaction": "PRURITUS",
+      "count": 352945,
+      "pct_of_max": 28,
+      "count_k": "353k"
+    },
+    {
+      "reaction": "PYREXIA",
+      "count": 332570,
+      "pct_of_max": 26,
+      "count_k": "333k"
+    },
+    {
+      "reaction": "FALL",
+      "count": 318322,
+      "pct_of_max": 25,
+      "count_k": "318k"
+    },
+    {
+      "reaction": "PNEUMONIA",
+      "count": 308012,
+      "pct_of_max": 24,
+      "count_k": "308k"
+    },
+    {
+      "reaction": "INJECTION SITE PAIN",
+      "count": 286053,
+      "pct_of_max": 23,
+      "count_k": "286k"
+    },
+    {
+      "reaction": "CONDITION AGGRAVATED",
+      "count": 285735,
+      "pct_of_max": 23,
+      "count_k": "286k"
+    },
+    {
+      "reaction": "PAIN IN EXTREMITY",
+      "count": 284574,
+      "pct_of_max": 23,
+      "count_k": "285k"
+    },
+    {
+      "reaction": "ANXIETY",
+      "count": 274802,
+      "pct_of_max": 22,
+      "count_k": "275k"
+    },
+    {
+      "reaction": "WEIGHT DECREASED",
+      "count": 267466,
+      "pct_of_max": 21,
+      "count_k": "267k"
+    },
+    {
+      "reaction": "COUGH",
+      "count": 266540,
+      "pct_of_max": 21,
+      "count_k": "267k"
+    }
+  ],
+  "top_drugs": [
+    {
+      "drug": "ADALIMUMAB",
+      "count": 695825,
+      "pct_of_max": 100,
+      "count_k": "696k"
+    },
+    {
+      "drug": "ETANERCEPT",
+      "count": 591576,
+      "pct_of_max": 85,
+      "count_k": "592k"
+    },
+    {
+      "drug": "ASPIRIN",
+      "count": 518579,
+      "pct_of_max": 75,
+      "count_k": "519k"
+    },
+    {
+      "drug": "ASPIRIN 81 MG",
+      "count": 493225,
+      "pct_of_max": 71,
+      "count_k": "493k"
+    },
+    {
+      "drug": "ASPIRIN 325 MG",
+      "count": 492979,
+      "pct_of_max": 71,
+      "count_k": "493k"
+    },
+    {
+      "drug": "PREDNISONE",
+      "count": 482846,
+      "pct_of_max": 69,
+      "count_k": "483k"
+    },
+    {
+      "drug": "METHOTREXATE SODIUM",
+      "count": 473797,
+      "pct_of_max": 68,
+      "count_k": "474k"
+    },
+    {
+      "drug": "OMEPRAZOLE MAGNESIUM",
+      "count": 433214,
+      "pct_of_max": 62,
+      "count_k": "433k"
+    },
+    {
+      "drug": "ACETAMINOPHEN",
+      "count": 417477,
+      "pct_of_max": 60,
+      "count_k": "417k"
+    },
+    {
+      "drug": "DUPILUMAB",
+      "count": 411692,
+      "pct_of_max": 59,
+      "count_k": "412k"
+    },
+    {
+      "drug": "METHOTREXATE",
+      "count": 410048,
+      "pct_of_max": 59,
+      "count_k": "410k"
+    },
+    {
+      "drug": "LENALIDOMIDE",
+      "count": 409023,
+      "pct_of_max": 59,
+      "count_k": "409k"
+    },
+    {
+      "drug": "FUROSEMIDE",
+      "count": 387990,
+      "pct_of_max": 56,
+      "count_k": "388k"
+    },
+    {
+      "drug": "ERGOCALCIFEROL",
+      "count": 366492,
+      "pct_of_max": 53,
+      "count_k": "366k"
+    },
+    {
+      "drug": "GABAPENTIN",
+      "count": 351758,
+      "pct_of_max": 51,
+      "count_k": "352k"
+    },
+    {
+      "drug": "METFORMIN",
+      "count": 342035,
+      "pct_of_max": 49,
+      "count_k": "342k"
+    },
+    {
+      "drug": "OMEPRAZOLE",
+      "count": 331879,
+      "pct_of_max": 48,
+      "count_k": "332k"
+    },
+    {
+      "drug": "LEVOTHYROXINE SODIUM",
+      "count": 304475,
+      "pct_of_max": 44,
+      "count_k": "304k"
+    },
+    {
+      "drug": "LISINOPRIL",
+      "count": 297697,
+      "pct_of_max": 43,
+      "count_k": "298k"
+    },
+    {
+      "drug": "METFORMIN ER 500 MG",
+      "count": 289760,
+      "pct_of_max": 42,
+      "count_k": "290k"
+    }
+  ],
+  "outcomes": [
+    {
+      "serious": "Serious",
+      "count": 11511332,
+      "pct": 57.6
+    },
+    {
+      "serious": "Not Serious",
+      "count": 8485054,
+      "pct": 42.4
+    }
+  ],
+  "by_country": [
+    {
+      "country": "US",
+      "count": 11405722,
+      "pct_of_max": 100,
+      "count_k": "11406k"
+    },
+    {
+      "country": "CA",
+      "count": 669589,
+      "pct_of_max": 6,
+      "count_k": "670k"
+    },
+    {
+      "country": "GB",
+      "count": 542995,
+      "pct_of_max": 5,
+      "count_k": "543k"
+    },
+    {
+      "country": "JP",
+      "count": 507084,
+      "pct_of_max": 4,
+      "count_k": "507k"
+    },
+    {
+      "country": "FR",
+      "count": 473768,
+      "pct_of_max": 4,
+      "count_k": "474k"
+    },
+    {
+      "country": "DE",
+      "count": 328713,
+      "pct_of_max": 3,
+      "count_k": "329k"
+    },
+    {
+      "country": "IT",
+      "count": 231297,
+      "pct_of_max": 2,
+      "count_k": "231k"
+    },
+    {
+      "country": "CN",
+      "count": 192003,
+      "pct_of_max": 2,
+      "count_k": "192k"
+    },
+    {
+      "country": "BR",
+      "count": 146726,
+      "pct_of_max": 1,
+      "count_k": "147k"
+    },
+    {
+      "country": "ES",
+      "count": 138388,
+      "pct_of_max": 1,
+      "count_k": "138k"
+    },
+    {
+      "country": "AU",
+      "count": 130728,
+      "pct_of_max": 1,
+      "count_k": "131k"
+    },
+    {
+      "country": "NL",
+      "count": 92542,
+      "pct_of_max": 1,
+      "count_k": "93k"
+    },
+    {
+      "country": "EU",
+      "count": 87376,
+      "pct_of_max": 1,
+      "count_k": "87k"
+    },
+    {
+      "country": "IN",
+      "count": 75231,
+      "pct_of_max": 1,
+      "count_k": "75k"
+    },
+    {
+      "country": "CO",
+      "count": 73229,
+      "pct_of_max": 1,
+      "count_k": "73k"
+    }
+  ]
+}

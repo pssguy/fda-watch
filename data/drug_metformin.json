@@ -1,0 +1,107 @@
+{
+  "drug_name": "METFORMIN",
+  "total_reports": 342035,
+  "top_reactions": [
+    {
+      "reaction": "NAUSEA",
+      "count": 21946,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 21887,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "BLOOD GLUCOSE INCREASED",
+      "count": 18329,
+      "pct_of_max": 84
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 18265,
+      "pct_of_max": 83
+    },
+    {
+      "reaction": "FATIGUE",
+      "count": 17252,
+      "pct_of_max": 79
+    },
+    {
+      "reaction": "ACUTE KIDNEY INJURY",
+      "count": 16440,
+      "pct_of_max": 75
+    },
+    {
+      "reaction": "LACTIC ACIDOSIS",
+      "count": 16154,
+      "pct_of_max": 74
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 14692,
+      "pct_of_max": 67
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 13511,
+      "pct_of_max": 62
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 13252,
+      "pct_of_max": 60
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 12132,
+      "pct_of_max": 55
+    },
+    {
+      "reaction": "WEIGHT DECREASED",
+      "count": 11985,
+      "pct_of_max": 55
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 11891,
+      "pct_of_max": 54
+    },
+    {
+      "reaction": "PAIN",
+      "count": 11567,
+      "pct_of_max": 53
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 10468,
+      "pct_of_max": 48
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 234565,
+      "pct": 68.6
+    },
+    {
+      "serious": "Not Serious",
+      "count": 107350,
+      "pct": 31.4
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Female",
+      "count": 169010
+    },
+    {
+      "sex": "Male",
+      "count": 144814
+    },
+    {
+      "sex": "Unknown",
+      "count": 1058
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "drug_name": "ASPIRIN",
+  "total_reports": 518579,
+  "top_reactions": [
+    {
+      "reaction": "FATIGUE",
+      "count": 31969,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 27184,
+      "pct_of_max": 85
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 26582,
+      "pct_of_max": 83
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 26451,
+      "pct_of_max": 83
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 22392,
+      "pct_of_max": 70
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 21674,
+      "pct_of_max": 68
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 19480,
+      "pct_of_max": 61
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 18896,
+      "pct_of_max": 59
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 18703,
+      "pct_of_max": 59
+    },
+    {
+      "reaction": "FALL",
+      "count": 18611,
+      "pct_of_max": 58
+    },
+    {
+      "reaction": "PAIN",
+      "count": 18013,
+      "pct_of_max": 56
+    },
+    {
+      "reaction": "PNEUMONIA",
+      "count": 15906,
+      "pct_of_max": 50
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 15782,
+      "pct_of_max": 49
+    },
+    {
+      "reaction": "MYOCARDIAL INFARCTION",
+      "count": 15007,
+      "pct_of_max": 47
+    },
+    {
+      "reaction": "DEATH",
+      "count": 14880,
+      "pct_of_max": 47
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 370776,
+      "pct": 71.5
+    },
+    {
+      "serious": "Not Serious",
+      "count": 147541,
+      "pct": 28.5
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Male",
+      "count": 247374
+    },
+    {
+      "sex": "Female",
+      "count": 239388
+    },
+    {
+      "sex": "Unknown",
+      "count": 1283
+    }
+  ]
+}

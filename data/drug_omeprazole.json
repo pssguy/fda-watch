@@ -1,0 +1,107 @@
+{
+  "drug_name": "OMEPRAZOLE",
+  "total_reports": 331879,
+  "top_reactions": [
+    {
+      "reaction": "FATIGUE",
+      "count": 19903,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 19841,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 19625,
+      "pct_of_max": 99
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 16336,
+      "pct_of_max": 82
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 15642,
+      "pct_of_max": 79
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 14629,
+      "pct_of_max": 74
+    },
+    {
+      "reaction": "PAIN",
+      "count": 13761,
+      "pct_of_max": 69
+    },
+    {
+      "reaction": "CHRONIC KIDNEY DISEASE",
+      "count": 13547,
+      "pct_of_max": 68
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 13263,
+      "pct_of_max": 67
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 13106,
+      "pct_of_max": 66
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 12601,
+      "pct_of_max": 63
+    },
+    {
+      "reaction": "ACUTE KIDNEY INJURY",
+      "count": 11753,
+      "pct_of_max": 59
+    },
+    {
+      "reaction": "MALAISE",
+      "count": 10918,
+      "pct_of_max": 55
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 10700,
+      "pct_of_max": 54
+    },
+    {
+      "reaction": "ARTHRALGIA",
+      "count": 10690,
+      "pct_of_max": 54
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 246198,
+      "pct": 74.2
+    },
+    {
+      "serious": "Not Serious",
+      "count": 85544,
+      "pct": 25.8
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Female",
+      "count": 180674
+    },
+    {
+      "sex": "Male",
+      "count": 124208
+    },
+    {
+      "sex": "Unknown",
+      "count": 439
+    }
+  ]
+}

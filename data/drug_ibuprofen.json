@@ -1,0 +1,107 @@
+{
+  "drug_name": "IBUPROFEN",
+  "total_reports": 262454,
+  "top_reactions": [
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 24339,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "PAIN",
+      "count": 18851,
+      "pct_of_max": 77
+    },
+    {
+      "reaction": "FATIGUE",
+      "count": 17869,
+      "pct_of_max": 73
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 17349,
+      "pct_of_max": 71
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 15814,
+      "pct_of_max": 65
+    },
+    {
+      "reaction": "ARTHRALGIA",
+      "count": 12952,
+      "pct_of_max": 53
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 12535,
+      "pct_of_max": 52
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 12452,
+      "pct_of_max": 51
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 12139,
+      "pct_of_max": 50
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 10736,
+      "pct_of_max": 44
+    },
+    {
+      "reaction": "RASH",
+      "count": 10700,
+      "pct_of_max": 44
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 10400,
+      "pct_of_max": 43
+    },
+    {
+      "reaction": "PYREXIA",
+      "count": 9461,
+      "pct_of_max": 39
+    },
+    {
+      "reaction": "PRURITUS",
+      "count": 9419,
+      "pct_of_max": 39
+    },
+    {
+      "reaction": "DRUG HYPERSENSITIVITY",
+      "count": 8277,
+      "pct_of_max": 34
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 169979,
+      "pct": 64.8
+    },
+    {
+      "serious": "Not Serious",
+      "count": 92339,
+      "pct": 35.2
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Female",
+      "count": 153743
+    },
+    {
+      "sex": "Male",
+      "count": 79877
+    },
+    {
+      "sex": "Unknown",
+      "count": 1169
+    }
+  ]
+}

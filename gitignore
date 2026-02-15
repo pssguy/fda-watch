@@ -1,0 +1,18 @@
+# Environment & secrets
+.Renviron
+.env
+
+# R project internals
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# renv library (lock file IS tracked, library is not)
+renv/library/
+renv/staging/
+renv/sandbox/
+
+# OS junk
+.DS_Store
+Thumbs.db

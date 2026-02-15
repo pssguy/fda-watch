@@ -1,0 +1,107 @@
+{
+  "drug_name": "ACETAMINOPHEN",
+  "total_reports": 417477,
+  "top_reactions": [
+    {
+      "reaction": "FATIGUE",
+      "count": 34486,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "DRUG INEFFECTIVE",
+      "count": 34371,
+      "pct_of_max": 100
+    },
+    {
+      "reaction": "OFF LABEL USE",
+      "count": 32846,
+      "pct_of_max": 95
+    },
+    {
+      "reaction": "NAUSEA",
+      "count": 29571,
+      "pct_of_max": 86
+    },
+    {
+      "reaction": "HEADACHE",
+      "count": 28378,
+      "pct_of_max": 82
+    },
+    {
+      "reaction": "PAIN",
+      "count": 28322,
+      "pct_of_max": 82
+    },
+    {
+      "reaction": "DIARRHOEA",
+      "count": 23628,
+      "pct_of_max": 69
+    },
+    {
+      "reaction": "DYSPNOEA",
+      "count": 22691,
+      "pct_of_max": 66
+    },
+    {
+      "reaction": "ARTHRALGIA",
+      "count": 22204,
+      "pct_of_max": 64
+    },
+    {
+      "reaction": "VOMITING",
+      "count": 20752,
+      "pct_of_max": 60
+    },
+    {
+      "reaction": "PYREXIA",
+      "count": 19561,
+      "pct_of_max": 57
+    },
+    {
+      "reaction": "RASH",
+      "count": 17645,
+      "pct_of_max": 51
+    },
+    {
+      "reaction": "DIZZINESS",
+      "count": 16826,
+      "pct_of_max": 49
+    },
+    {
+      "reaction": "ASTHENIA",
+      "count": 15836,
+      "pct_of_max": 46
+    },
+    {
+      "reaction": "PNEUMONIA",
+      "count": 15767,
+      "pct_of_max": 46
+    }
+  ],
+  "serious": [
+    {
+      "serious": "Serious",
+      "count": 304521,
+      "pct": 73
+    },
+    {
+      "serious": "Not Serious",
+      "count": 112660,
+      "pct": 27
+    }
+  ],
+  "patient_sex": [
+    {
+      "sex": "Female",
+      "count": 238273
+    },
+    {
+      "sex": "Male",
+      "count": 128921
+    },
+    {
+      "sex": "Unknown",
+      "count": 692
+    }
+  ]
+}
